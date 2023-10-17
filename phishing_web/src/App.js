@@ -1,11 +1,11 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Navigate } from "react-router-dom";
 import Sign_In from "./components/Sign_In";
 import InfoForm from "./components/InfoForm";
 import MainLayout from "./components/MainLayout";
 
 const router = createBrowserRouter([
     {
-        path:"/",
+        path:"/Home",
         element: <MainLayout/>,
         children:[
             {
@@ -17,6 +17,10 @@ const router = createBrowserRouter([
                 element:<InfoForm />
             }
         ]
+    },
+    {
+        path:"/",
+        element: <Navigate to="/Home/sign_in"></Navigate>
     }
 ])
 
