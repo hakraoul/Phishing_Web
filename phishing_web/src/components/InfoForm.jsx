@@ -1,11 +1,11 @@
-function SignIn() {
+function InfoForm() {
   return (
     <>
       <div>
-        Sign In Page
+        Info Form page
       </div>
     </>
   );
 }
 
-export default SignIn;
+export default InfoForm;
