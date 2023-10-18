@@ -18,7 +18,7 @@ function InfoForm() {
       case 2:
         return <Details></Details>;
       case 3:
-        return <Complete></Complete>;
+        return <Complete handleClick={handleClick}></Complete>;
       default:
     }
   };
