@@ -1,9 +1,11 @@
 import React, { useContext, useState } from "react";
 import { StepperContext } from "../context";
+import { useNavigate } from "react-router-dom";
 
 export default function Complete() {
   const [selectedFile, setSelectedFile] = useState(null);
   const { userData, setUserData } = useContext(StepperContext);
+  const nav = useNavigate('');
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
@@ -22,6 +24,7 @@ export default function Complete() {
       setUserData({ ...userData, file: selectedFile });
       console.log(selectedFile);
     }
+    nav('/Home/submitted');
   };
 
   return (
